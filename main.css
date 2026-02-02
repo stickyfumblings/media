@@ -1,0 +1,49 @@
+body {
+  background-color: white;
+}
+header {
+  background-color: black;
+  div {
+    display: flex;
+    justify-content: center;
+    }
+  img {
+    width: 50%;
+    }
+}
+.subhead {
+  background-color: #3dc1c3;
+  text-align: center;
+  padding: 10px;
+}
+.about {
+  border-style: solid;
+  border-width: medium;
+}
+.headshot 
+  img {
+  float: right;
+  border-radius: 50%;
+}
+.services {
+  background-color: #3dc1c3;
+  padding: 1px
+}
+.multimedia {
+  text-decoration: underline;
+  text-align: center;
+}
+.communications {
+  text-decoration: underline;
+  text-align: center;
+}
+.contact {
+  border-style: solid;
+  border-width: medium;
+}
+.details {
+  text-align: center;
+}
+footer {
+  text-align: center;
+}
