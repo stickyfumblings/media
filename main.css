@@ -1,3 +1,26 @@
+/* Font Families */
+body {
+  background-color: white;
+  font-family: 'Lora', serif;
+}
+
+h3 {
+  font-family: 'Archivo Black', sans-serif;
+}
+
+h5 {
+  font-family: 'Archivo', sans-serif;
+}
+
+.multimedia, .communications {
+  font-family: 'Archivo', sans-serif;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.footer p {
+  font-family: 'Archivo', sans-serif;
+}
 body {
   background-color: white;
 }
@@ -46,4 +69,24 @@ header {
 }
 footer {
   text-align: center;
+}
+/* Link Pseudo-classes */
+a:link {
+  color: #000;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #000;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #F16DA9;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #F16DA9;
+  text-decoration: underline;
 }
