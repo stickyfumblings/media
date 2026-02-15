@@ -21,9 +21,6 @@ h5 {
 .footer p {
   font-family: 'Archivo', sans-serif;
 }
-body {
-  background-color: white;
-}
 header {
   background-color: black;
   div {
@@ -89,4 +86,90 @@ a:hover {
 a:active {
   color: #F16DA9;
   text-decoration: underline;
+}
+/* List 1 - Custom square bullets */
+.service-list {
+  list-style-type: square;
+  padding-left: 40px;
+  color: #000;
+}
+
+.service-list li {
+  padding: 4px 0;
+}
+
+/* List 2 - Numbered, styled differently */
+.service-list-numbered {
+  list-style-type: decimal;
+  padding-left: 40px;
+  color: #000;
+  font-style: italic;
+}
+
+.service-list-numbered li {
+  padding: 4px 0;
+}
+.video {
+  text-align: center;
+  padding: 16px 0;
+}
+/* Table Styling */
+.pricing {
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Archivo', sans-serif;
+}
+
+caption {
+  font-family: 'Archivo', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+th {
+  background-color: #000;
+  color: #fff;
+  text-align: left;
+  padding: 10px 14px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+.quote-btn {
+  text-align: center;
+  padding: 16px 0;
+}
+
+.quote-btn button {
+  font-family: 'Archivo', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 14px 36px;
+  cursor: pointer;
+}
+
+.quote-btn button:hover {
+  background-color: #F16DA9;
 }
