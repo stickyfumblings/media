@@ -10,7 +10,10 @@
 </head>
 <body>
     <div id="container">
-            <header><div><img src="loteria.png" alt="Loteria Media logo" style="width:50%"></div></header>
+            <header>
+    <canvas id="brandCircle" width="150" height="150"></canvas>
+    <div><img src="loteria.png" alt="Loteria Media logo" style="width:50%"></div>
+</header>
         <div class="subhead">
             <h5>Copywriter | Project Manager | Media & Communications Strategist | Award-Winning Storyteller</h5>
             </div>
@@ -84,11 +87,27 @@
     <button onclick="getQuote()">Get a Quote!</button>
 </div>
         <div class="contact">
-            <h3>&#x1F4EC; Contact Us</h3>
-            <div class="details">
-                <p><a href="mailto:Contact@Loteria.Media" title="Send us a message">Contact@Loteria.Media</a></p>
-                <p><a href="tel:+19562464242" title="Here to help">(956) 246-4242</a></p>
-            </div>
+    <h3>Contact Us</h3>
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <input type="submit" value="Send Message">
+    </form>
+    
+    <div class="audio-player">
+        <audio controls>
+            <source src="assets/camera.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</div>
         </div>        
         <div class="footer">
                 <p>Copyright © 2026 Loteria Media - All Rights Reserved.</p>
@@ -101,6 +120,26 @@
             alert("Thanks, " + name + "! We'll be in touch at Contact@Loteria.Media 📬");
         }
     }
+</script>
+<script>
+    const canvas = document.getElementById('brandCircle');
+    const ctx = canvas.getContext('2d');
+    
+    // Draw circle with brand colors
+    const centerX = 75;
+    const centerY = 75;
+    const radius = 60;
+    
+    // Create gradient
+    const gradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, radius);
+    gradient.addColorStop(0, '#F16DA9');
+    gradient.addColorStop(0.5, '#3dc1c3');
+    gradient.addColorStop(1, '#000000');
+    
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+    ctx.fillStyle = gradient;
+    ctx.fill();
 </script>
 </body>
 </html>

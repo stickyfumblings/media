@@ -173,3 +173,62 @@ tr:hover {
 .quote-btn button:hover {
   background-color: #F16DA9;
 }
+/* Form Styling */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    color: #000;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #3dc1c3;
+    border-radius: 5px;
+    font-family: 'Lora', serif;
+    font-size: 14px;
+}
+
+form input[type="submit"] {
+    background-color: #3dc1c3;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #F16DA9;
+}
+
+/* Audio Player */
+.audio-player {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.audio-player audio {
+    width: 300px;
+}
+
+/* Canvas positioning */
+#brandCircle {
+    display: block;
+    margin: 10px auto;
+}
