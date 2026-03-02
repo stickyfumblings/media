@@ -125,20 +125,14 @@
     const canvas = document.getElementById('brandCircle');
     const ctx = canvas.getContext('2d');
     
-    // Draw circle with brand colors
+    // Draw simple pink circle
     const centerX = 75;
     const centerY = 75;
     const radius = 60;
     
-    // Create gradient
-    const gradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, radius);
-    gradient.addColorStop(0, '#F16DA9');
-    gradient.addColorStop(0.5, '#3dc1c3');
-    gradient.addColorStop(1, '#000000');
-    
     ctx.beginPath();
     ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
-    ctx.fillStyle = gradient;
+    ctx.fillStyle = '#F16DA9';
     ctx.fill();
 </script>
 </body>
