@@ -38,8 +38,6 @@ header {
 }
 .subhead {
   background-color: #3dc1c3;
-  text-align: center;
-  padding: 10px;
 }
 .flex-container {
   display: flex;
