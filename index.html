@@ -7,15 +7,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600&family=Lora:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( document ).tooltip();
+  } );
+  </script>
+  <style>
+  label {
+    display: inline-block;
+    width: 5em;
+  }
+  </style>
 </head>
 <body>
-    <div id="container">
+    <div id="main-container">
             <header>
     <canvas id="brandCircle" width="150" height="150"></canvas>
-    <div><img src="loteria.png" alt="Loteria Media logo" style="width:50%"></div>
+    <div><img src="loteria.png" alt="Loteria Media logo" style="width:50%"></div></div>
 </header>
-        <div class="subhead">
-            <h5>Copywriter | Project Manager | Media & Communications Strategist | Award-Winning Storyteller</h5>
+  <div class="subhead">
+    <div class="flex-container">
+        <div>Copywriter</div>
+        <div>Project Manager</div>
+        <div>Media & Communications Strategist</div>
+        <div>Award-Winning Storyteller</div>
+            </div>
             </div>
         <div class="about">
             <div class="headshot">
@@ -32,16 +52,20 @@
         <div class="services">
             <h3>&#x1F3AC; Services</h3>
             <div class="multimedia">Multimedia Production & Social Media Management</div>
+             <div class="container-service-media">
     <ul class="service-list">
-        <li>Video production and event streaming</li>
-        <li>Photography</li>
+        <div>Video production and event streaming</div>
+        <div>Photography</div>
     </ul>
+    </div>
 <div class="communications">Bilingual Communication & Journalism</div>
-    <ol class="service-list-numbered">
-        <li>Freelance journalism</li>
-        <li>Corporate communications</li>
-        <li>English/Spanish translation</li>
+ <div class="container-service-communications"> 
+<ol class="service-list-numbered">
+        <div>Freelance journalism</div>
+        <div>Corporate communications</div>
+        <div>English/Spanish translation</div>
     </ol>
+        </div>  
         </div>
         <div class="pricing">
     <h3>&#x1F4B0; Service Rates</h3>
@@ -96,7 +120,7 @@
         <input type="email" id="email" name="email" required>
         
         <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+        <textarea id="message" name="message" rows="4" required title="Send us a note and the best way to get back to you."></textarea>
         
         <input type="submit" value="Send Message">
     </form>

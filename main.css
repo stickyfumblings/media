@@ -3,21 +3,26 @@ body {
   background-color: white;
   font-family: 'Lora', serif;
 }
-
+@media (max-width: 1019px) {
+  .container {width:90%;}
+  .makeMeStack {
+    flex:100%;
+  }
+}
 h3 {
   font-family: 'Archivo Black', sans-serif;
 }
-
 h5 {
   font-family: 'Archivo', sans-serif;
 }
-
+* {
+  box-sizing: border-box;
+}
 .multimedia, .communications {
   font-family: 'Archivo', sans-serif;
   text-decoration: underline;
   text-align: center;
 }
-
 .footer p {
   font-family: 'Archivo', sans-serif;
 }
@@ -36,14 +41,54 @@ header {
   text-align: center;
   padding: 10px;
 }
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flex-container div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;  
+  font-size: 20px;
+}
+.container-service-media {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+.container-service-media div {
+  background-color: #f1f1f1;
+  margin: 1px;
+  padding: 1px;
+}
+.container-service-communications {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+.container-service-communications div {
+  background-color: #f1f1f1;
+  margin: 1px;
+  padding: 1px;
+}
 .about {
   border-style: solid;
   border-width: medium;
+  max-width: 100%; /* Set the maximum width of the About Us container */
 }
 .headshot 
   img {
-  float: right;
-  border-radius: 50%;
+  border-radius: 25%;
+  float: inline-end;
 }
 .services {
   background-color: #3dc1c3;
