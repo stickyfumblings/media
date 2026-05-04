@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html data-lang="en" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Lotería Media</title>
+  <meta name="description" content="Start a project with Lotería Media. Contact us for video production, photography, livestream, bilingual communications, and more." />
+  <link rel="stylesheet" href="main.css" />
+  <style>
+    .success-msg {
+      display:none; padding:16px 20px; border-radius:4px;
+      border:1px solid var(--accent); color:var(--accent);
+      background: color-mix(in srgb, var(--accent) 8%, transparent);
+      font-size:0.9rem; margin-top:16px;
+    }
+    .success-msg.show { display:block; }
+  </style>
+  <script>
+    (function(){
+      var l=localStorage.getItem('loteria-lang')||'en';
+      document.documentElement.setAttribute('data-lang',l);
+      document.documentElement.lang=l;
+    })();
+  </script>
+</head>
+<body data-theme="green">
+
+  <div class="rainbow-ribbon"></div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">LOTERÍA MEDIA</a>
+      <div class="nav-links" id="navLinks">
+        <a href="services.html"><span data-lang-show="en">Services</span><span data-lang-show="es">Servicios</span></a>
+        <a href="portfolio.html"><span data-lang-show="en">Portfolio</span><span data-lang-show="es">Portafolio</span></a>
+        <a href="about.html"><span data-lang-show="en">About</span><span data-lang-show="es">Acerca</span></a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="nav-cta active"><span data-lang-show="en">Contact</span><span data-lang-show="es">Contacto</span></a>
+      </div>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+          <span data-lang-show="en">ES</span><span data-lang-show="es">EN</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="label"><span data-lang-show="en">Let's Talk</span><span data-lang-show="es">Hablemos</span></span>
+      <h1 data-lang-show="en">Start a<br><span class="accent">Project.</span></h1>
+      <h1 data-lang-show="es">Inicia un<br><span class="accent">Proyecto.</span></h1>
+      <p data-lang-show="en">Tell us what you need. We'll get back to you within one business day.</p>
+      <p data-lang-show="es">Cuéntanos qué necesitas. Te responderemos dentro de un día hábil.</p>
+    </div>
+  </div>
+  <hr class="divider" />
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-split">
+
+        <div>
+          <form class="contact-form" id="contactForm"
+                name="contact" method="POST" data-netlify="true"
+                netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p style="display:none;"><input name="bot-field" /></p>
+
+            <div class="form-group">
+              <label for="name">
+                <span data-lang-show="en">Your Name</span><span data-lang-show="es">Tu Nombre</span>
+              </label>
+              <input type="text" id="name" name="name"
+                data-ph-en="First and last name"
+                data-ph-es="Nombre y apellido"
+                placeholder="First and last name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">
+                <span data-lang-show="en">Email Address</span><span data-lang-show="es">Correo Electrónico</span>
+              </label>
+              <input type="email" id="email" name="email"
+                data-ph-en="you@company.com"
+                data-ph-es="tu@empresa.com"
+                placeholder="you@company.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">
+                <span data-lang-show="en">Phone (Optional)</span><span data-lang-show="es">Teléfono (Opcional)</span>
+              </label>
+              <input type="tel" id="phone" name="phone" placeholder="(210) 555-0000" />
+            </div>
+
+            <div class="form-group">
+              <label for="service">
+                <span data-lang-show="en">Service Interested In</span><span data-lang-show="es">Servicio de Interés</span>
+              </label>
+              <select id="service" name="service">
+                <option value="" data-en="Select a service..." data-es="Selecciona un servicio...">Select a service...</option>
+                <option value="video" data-en="Video Production" data-es="Producción de Video">Video Production</option>
+                <option value="photo" data-en="Photography" data-es="Fotografía">Photography</option>
+                <option value="livestream" data-en="Livestream Production" data-es="Transmisión en Vivo">Livestream Production</option>
+                <option value="social" data-en="Social Media Management" data-es="Gestión de Redes Sociales">Social Media Management</option>
+                <option value="bilingual" data-en="Bilingual Communications" data-es="Comunicaciones Bilingües">Bilingual Communications</option>
+                <option value="web" data-en="Web Design" data-es="Diseño Web">Web Design</option>
+                <option value="multiple" data-en="Multiple Services / Not Sure" data-es="Múltiples Servicios / No Estoy Seguro">Multiple Services / Not Sure</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">
+                <span data-lang-show="en">Tell Us About Your Project</span><span data-lang-show="es">Cuéntanos Sobre Tu Proyecto</span>
+              </label>
+              <textarea id="message" name="message"
+                data-ph-en="What do you need? Timeline? Budget range? Any details help."
+                data-ph-es="¿Qué necesitas? ¿Plazos? ¿Presupuesto? Cualquier detalle ayuda."
+                placeholder="What do you need? Timeline? Budget range? Any details help." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;">
+              <span data-lang-show="en">Send Message</span><span data-lang-show="es">Enviar Mensaje</span>
+            </button>
+            <div class="success-msg" id="successMsg">
+              <span data-lang-show="en">✓ Thanks! We'll be in touch at <strong>Contact@Loteria.Media</strong> within one business day.</span>
+              <span data-lang-show="es">✓ ¡Gracias! Te contactaremos en <strong>Contact@Loteria.Media</strong> dentro de un día hábil.</span>
+            </div>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <h3><span data-lang-show="en">Other Ways to Reach Us</span><span data-lang-show="es">Otras Formas de Contactarnos</span></h3>
+
+          <div class="contact-item">
+            <span class="label"><span data-lang-show="en">Email</span><span data-lang-show="es">Correo</span></span>
+            <a href="mailto:Contact@Loteria.Media">Contact@Loteria.Media</a>
+          </div>
+
+          <div class="contact-item">
+            <span class="label"><span data-lang-show="en">Based In</span><span data-lang-show="es">Ubicados En</span></span>
+            <p>San Antonio, Texas</p>
+            <p><span data-lang-show="en">Available for remote projects nationwide</span><span data-lang-show="es">Disponibles para proyectos remotos a nivel nacional</span></p>
+          </div>
+
+          <div class="contact-item">
+            <span class="label"><span data-lang-show="en">Languages</span><span data-lang-show="es">Idiomas</span></span>
+            <p><span data-lang-show="en">English &amp; Spanish — fluently, not as a formality</span><span data-lang-show="es">Inglés y Español — fluidamente, no como formalidad</span></p>
+          </div>
+
+          <div class="contact-item">
+            <span class="label"><span data-lang-show="en">Book a Consultation</span><span data-lang-show="es">Reservar Consulta</span></span>
+            <p data-lang-show="en">Prefer to talk first? Email us directly to schedule a free 30-minute discovery call.</p>
+            <p data-lang-show="es">¿Prefieres hablar primero? Escríbenos para agendar una llamada de descubrimiento gratuita de 30 minutos.</p>
+            <a href="mailto:Contact@Loteria.Media?subject=Consultation%20Request" class="btn btn-outline" style="margin-top:12px;">
+              <span data-lang-show="en">Email to Book a Call</span><span data-lang-show="es">Email para Agendar Llamada</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="nav-logo">LOTERÍA MEDIA</span>
+          <p data-lang-show="en">Award-winning media production and bilingual communications — built for authentic storytelling.</p>
+          <p data-lang-show="es">Producción multimedia galardonada y comunicaciones bilingües — construida para la narrativa auténtica.</p>
+        </div>
+        <div class="footer-col">
+          <h4><span data-lang-show="en">Services</span><span data-lang-show="es">Servicios</span></h4>
+          <ul>
+            <li><a href="services.html"><span data-lang-show="en">Video Production</span><span data-lang-show="es">Producción de Video</span></a></li>
+            <li><a href="services.html"><span data-lang-show="en">Photography</span><span data-lang-show="es">Fotografía</span></a></li>
+            <li><a href="services.html"><span data-lang-show="en">Livestream</span><span data-lang-show="es">Transmisión en Vivo</span></a></li>
+            <li><a href="services.html"><span data-lang-show="en">Social Media</span><span data-lang-show="es">Redes Sociales</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4><span data-lang-show="en">Company</span><span data-lang-show="es">Empresa</span></h4>
+          <ul>
+            <li><a href="about.html"><span data-lang-show="en">About</span><span data-lang-show="es">Acerca</span></a></li>
+            <li><a href="portfolio.html"><span data-lang-show="en">Portfolio</span><span data-lang-show="es">Portafolio</span></a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html"><span data-lang-show="en">Contact</span><span data-lang-show="es">Contacto</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4><span data-lang-show="en">Contact</span><span data-lang-show="es">Contacto</span></h4>
+          <ul>
+            <li><a href="mailto:Contact@Loteria.Media">Contact@Loteria.Media</a></li>
+            <li><a href="contact.html"><span data-lang-show="en">Book a Consultation</span><span data-lang-show="es">Reservar Consulta</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p><span data-lang-show="en">© 2026 Lotería Media — All Rights Reserved.</span><span data-lang-show="es">© 2026 Lotería Media — Todos los Derechos Reservados.</span></p>
+        <p style="color: var(--text-dim);"><span data-lang-show="en">San Antonio, TX · English &amp; Spanish</span><span data-lang-show="es">San Antonio, TX · Inglés y Español</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="rainbow-ribbon"></div>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+
+    function applyLang(lang) {
+      // Swap placeholders
+      document.querySelectorAll('[data-ph-en]').forEach(el => {
+        el.placeholder = lang === 'es' ? el.dataset.phEs : el.dataset.phEn;
+      });
+      // Swap select option text
+      document.querySelectorAll('select option[data-en]').forEach(opt => {
+        opt.textContent = lang === 'es' ? opt.dataset.es : opt.dataset.en;
+      });
+    }
+
+    // Apply on load
+    applyLang(document.documentElement.getAttribute('data-lang') || 'en');
+
+    document.getElementById('langToggle').addEventListener('click', () => {
+      var html = document.documentElement;
+      var next = html.getAttribute('data-lang') === 'en' ? 'es' : 'en';
+      html.setAttribute('data-lang', next);
+      html.lang = next;
+      localStorage.setItem('loteria-lang', next);
+      applyLang(next);
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const name    = document.getElementById('name').value.trim();
+      const email   = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const lang    = document.documentElement.getAttribute('data-lang');
+
+      if (!name || !email || !message) {
+        alert(lang === 'es'
+          ? 'Por favor completa tu nombre, correo y mensaje.'
+          : 'Please fill in your name, email, and message.');
+        return;
+      }
+
+      try {
+        await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(new FormData(this)).toString()
+        });
+      } catch (_) { /* silent on GitHub Pages */ }
+
+      document.getElementById('successMsg').classList.add('show');
+      this.reset();
+      applyLang(lang);
+      document.getElementById('successMsg').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  </script>
+</body>
+</html>
